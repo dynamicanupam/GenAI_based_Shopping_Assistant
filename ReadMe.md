@@ -90,16 +90,13 @@ User output example screenshot:
 
 1. Screenshot 1:
 
-![ScreenshotA](Images/Screenshot1.png)
+![Screenshot1](Images/1_ShopAssistChat.png)
 
 2. Screenshot 2:
 
-![ScreenshotB](Images/Screenshot2.png)
+![Screenshot2](Images/2_ShopAssistChat.png)
 
 3. Screenshot 3:
 
-![ScreenshotC](Images/Screenshot3.png)
+![Screenshot3](Images/3_ShopAssistChat.png)
 
-4. Screenshot 4:
-
-![ScreenshotD](Images/Screenshot4.png)
