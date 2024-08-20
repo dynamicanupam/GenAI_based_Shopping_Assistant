@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styles */
+.outercontainer {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Header Styles */
+.header {
+    background-color: #af4c4c;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    color: #fff;
+    margin: 0;
+}
+
+/* Conversation Styles */
+.conversationcontainer {
+    padding: 20px;
+    height: 400px;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.user, .bot {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    clear: both;
+    word-wrap: break-word;
+}
+
+.user {
+    background-color: #007BFF;
+    color: #fff;
+    float: right;
+}
+
+.bot {
+    background-color: #6d776e;
+    color: #fff;
+    float: left;
+}
+
+/* Input Container Styles */
+.inputcontainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Styles */
+.inputform, .endform {
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.inputtextbox {
+    width: 85%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.submitbutton {
+    width: 40px;
+    height: 40px;
+    background: url('/static/send-icon.png') no-repeat center center;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.endbutton {
+    background-color: #ff5252;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    text-align: center;
+}
+
+.endbutton:hover {
+    background-color: #ff1744;
+}
+
+.endbutton:focus, .submitbutton:focus, .inputtextbox:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
