@@ -1,6 +1,6 @@
 # ShopAssist AI
 
-## 1. Project Background
+## 1. Background
 In today's digital age, online shopping has become the go-to option for many consumers. However, the overwhelming number of choices and the lack of personalized assistance can make the shopping experience daunting. To address this, we have developed ShopAssist AI, a chatbot that combines the power of large language models and rule-based functions to ensure accurate and reliable information delivery.
 
 ## 2. Problem Statement
@@ -42,6 +42,16 @@ The Flask application utilizes various functionalities:
 - **Conversation Management:** Handles conversation initiation, response generation through OpenAI's chat model, and conversation history maintenance.
 - **User Input Processing:** Captures user input, performs moderation checks, and extracts user profiles from conversation history (converting user input string to JSON using OpenAI Function calling).
 - **Recommendation Logic:** Compares user profiles with laptop data, validates recommendations, and generates recommendation text.
+
+  ### Major Functions
+- `initialize_conversation()`: Initializes the variable conversation with the system message.
+- `get_chat_completions()`: Takes the ongoing conversation as the input and returns the response by the assistant.
+- `moderation_check()`: Checks if the user's or the assistant's message is inappropriate. If any of these is inappropriate, it ends the conversation.
+- `intent_confirmation_layer()`: Evaluates if the chatbot has captured the user's profile clearly.
+- `dictionary_present()`: Checks if the final understanding of the user's profile is returned by the chatbot as a Python dictionary.
+- `compare_laptops_with_user()`: Compares the user's profile with the different laptops and comes back with the top 3 recommendations.
+- `initialize_conv_reco()`: Initializes the recommendations conversation.
+
 
 ### Prerequisites
 - Python 3.7+
