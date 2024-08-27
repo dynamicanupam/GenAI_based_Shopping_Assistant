@@ -18,13 +18,7 @@ Given a dataset containing information about laptops (product names, specificati
 - **User Input Moderation:** User input is moderated using OpenAI's moderation API to ensure a safe and secure conversation.
 - **User Profile Extraction:** The AI assistant extracts key information from the conversation to build a user profile that reflects their laptop preferences (budget, screen size, processing power, etc.) using OpenAI's function calling mechanism to convert a user requirement string into a JSON object.
 
-### 4.1 Extracting User Requirements
-
-ShopAssistAI utilizes OpenAI's chat-completion endpoint to generate responses and potentially extract user requirements within the conversation flow. This is achieved by sending prompts and conversation history to the API, and the response might contain user-expressed preferences. While OpenAI's API doesn't natively convert text to JSON, OpenAI’s function calling mechanism is used to convert user string extracts to relevant user requirements as key-value pairs.
-
-### 4.2 Building the User Profile
-
-The extracted key-value pairs are used to construct a user profile dictionary in JSON format, representing the user's preferences for various laptop attributes. We have a dataset `laptop_data.csv` where each row describes the features of a single laptop and also has a small description at the end. The chatbot will leverage large language models to parse this `Description` column and provide recommendations.
+We have a dataset `laptop_data.csv` where each row describes the features of a single laptop and also has a small description at the end. The chatbot will leverage large language models to parse this `Description` column and provide recommendations.
 
 ## 5. System Architecture
 
@@ -63,8 +57,8 @@ To get started with ShopAssist AI, follow these steps:
 
 1. **Clone the repository:**
    ```
-   git clone https://github.com/rajuaiml777/ShopAssistAI.git
-   cd ShopAssistAI
+   git clone https://github.com/dynamicanupam/ShopAssist-AI.git
+   cd ShopAssist-AI
    ```
 2. **Lunch VS Code from Anaconda**
    - In VS Code go to `File` > `Open Folder...` and select the `ShopassistAI` folder.
@@ -79,34 +73,16 @@ python app.py
 ```
 #### Note: This version includes steps to create and activate the Conda environment with Python 3.11.9 0r above, ensuring users set up python environment correctly before installing dependencies and running the application.
 
-## 7. Appendix - A
 
-### Key Points:
-
-- User interacts through a web browser.
-- Flask web app receives the request and routes it to the appropriate function based on the URL.
-- Two main functionalities: Invite flow (initial conversation) and Recommendation flow.
-- Both functionalities involve:
-  - Moderating user input.
-  - Using OpenAI's chat model to generate responses.
-  - Extracting user profile or validating recommendations.
-- The application communicates with an external source (likely a database) to compare user profiles with laptop data.
-- Recommendations are validated before presenting them to the user.
-- The conversation history is updated after each interaction.
-
-## 8. Appendix - B
+## 7. Appendix - B
 
 User output example screenshot:
 
-1. Screenshot 1:
-
 ![Screenshot1](Images/1_ShopAssistChat.png)
 
-2. Screenshot 2:
 
 ![Screenshot2](Images/2_ShopAssistChat.png)
 
-3. Screenshot 3:
 
 ![Screenshot3](Images/3_ShopAssistChat.png)
 
